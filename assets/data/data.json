@@ -1,4 +1,4 @@
-{"Pets":[
+[
     {"name"                   : "Milton",
      "breed"                  : "American Bulldog cross",
      "Spayed / Neutered"      : "True",
@@ -763,4 +763,4 @@
      "Image 3"                : "https://random.dog/21060-3302-20249.jpg"
     }
 
-]}
+]
