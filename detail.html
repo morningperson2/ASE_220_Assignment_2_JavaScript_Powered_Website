@@ -1,71 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Album example · Bootstrap v5.0</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
-    <script> src = "assets/data/data.json"</script>
-    
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+  <script> src = "assets/data/data.json"</script>
 
-    <!-- Bootstrap core CSS -->
-<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+  <!-- Bootstrap core CSS -->
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
 
-    
-  </head>
-  <body>
-    
+</head>
+<body>
+
 <header>
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
-        <strong>Pet adoption website</strong>
+      <strong>Pet adoption website</strong>
       </a>
     </div>
   </div>
 </header>
 
 <main>
-  <div class="album py-5 bg-light">
+  <div class="album py-5" id="gender_colour">
     <div class="container">
-	<h1 id="petName">Pet name</h1>
-	<h4>Breed</h4>
-  <div id="breed">text</div>
-  <h4>Gender</h4>
-  <div id="gender">text</div>
-  <h4>Age</h4>
-  <div id="age">text</div>
-  <h4>Animal ID</h4>
-  <div id="ID">text</div>
-  <h4>Vaccination Status</h4>
-  <div id="status">text</div>
-  <h4>Location</h4>
-  <div id="location">text</div>
-  <h4>Available for Adoption</h4>
-  <div id="adoption">text</div>
-  <h4>Additional Details</h4>
-  <div id="details">text</div>
-	<hr />
-	<h2>Image Gallery</h2>
+      <h1 id="petName">Pet name</h1>
+      <h4>Breed</h4>
+      <div id="breed">text</div>
+      <h4>Gender</h4>
+      <div id="gender">text</div>
+      <h4>Age</h4>
+      <div id="age">text</div>
+      <h4>Animal ID</h4>
+      <div id="ID">text</div>
+      <h4>Vaccination Status</h4>
+      <div id="status">text</div>
+      <h4>Location</h4>
+      <div id="location">text</div>
+      <h4>Available for Adoption</h4>
+      <div id="adoption">text</div>
+      <h4>Additional Details</h4>
+      <div id="details">text</div>
+      <hr />
+      <h2>Image Gallery</h2>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
@@ -83,9 +82,11 @@
           </div>
         </div>
       </div>
+      <div class="btn-group">
+        <a type="button" class="btn btn-light btn-sm btn-outline-secondary" href="index.html">Back</a>
+      </div>
     </div>
   </div>
-
 </main>
 
 <footer class="text-muted py-5">
@@ -97,29 +98,43 @@
 </footer>
 
 
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/getAllURLParams.js"></script>
-	<script type="module">
-    import Pets from './assets/data/data.json' assert {type: 'json'};
-		console.log(getAllUrlParams().index);
-		let pet = !(getAllUrlParams().index)?0:getAllUrlParams().index;
-    let start = getAllUrlParams().index
-		
-		document.getElementById(`petName`).innerText = Pets[start].name;
-    document.getElementById(`breed`).innerText = Pets[start].breed;
-    document.getElementById(`gender`).innerText = Pets[start].gender;
-    document.getElementById(`age`).innerText = Pets[start].age;
-    document.getElementById(`ID`).innerText = Pets[start]["Animal ID"];
-    document.getElementById(`status`).innerText = Pets[start]["Vaccination status"];
-    document.getElementById(`location`).innerText = Pets[start].Location;
-    document.getElementById(`adoption`).innerText = Pets[start]["Available for adoption"];
-    document.getElementById(`details`).innerText = Pets[start]["Additional details"];
-    document.getElementById(`Pet1image`).src = Pets[start]["Image 1"];
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/getAllURLParams.js"></script>
+<script type="module">
+  import Pets from './assets/data/data.json' assert {type: 'json'};
+  console.log(getAllUrlParams().index);
 
-    document.getElementById(`Pet1image`).src = Pets[start]["Image 1"];
-    document.getElementById(`Pet2image`).src = Pets[start]["Image 2"];
-    document.getElementById(`Pet3image`).src = Pets[start]["Image 3"];
-	</script>
-      
-  </body>
+  let pet = !(getAllUrlParams().index)?0:getAllUrlParams().index;
+  let start = getAllUrlParams().index
+
+  document.getElementById(`petName`).innerText = Pets[start].name;
+  document.getElementById(`breed`).innerText = Pets[start].breed;
+  document.getElementById(`gender`).innerText = Pets[start].gender;
+  document.getElementById(`age`).innerText = Pets[start].age;
+  document.getElementById(`ID`).innerText = Pets[start]["Animal ID"];
+  document.getElementById(`status`).innerText = Pets[start]["Vaccination status"];
+  document.getElementById(`location`).innerText = Pets[start].Location;
+  document.getElementById(`adoption`).innerText = Pets[start]["Available for adoption"];
+  document.getElementById(`details`).innerText = Pets[start]["Additional details"];
+  document.getElementById(`Pet1image`).src = Pets[start]["Image 1"];
+
+  document.getElementById(`Pet1image`).src = Pets[start]["Image 1"];
+  document.getElementById(`Pet2image`).src = Pets[start]["Image 2"];
+  document.getElementById(`Pet3image`).src = Pets[start]["Image 3"];
+
+  /* Page title change */
+  document.title = Pets[start].name;
+
+  /* Gender based page colour */
+  if (Pets[start].gender === "Male" || Pets[start].gender === "male") {
+    document.getElementById('gender_colour').style.setProperty("background", "#1ea0e6", "important");
+  } else if (Pets[start].gender === "Female" || Pets[start].gender === "female") {
+    document.getElementById('gender_colour').style.setProperty("background", "#e03f82", "important");
+  } else {
+    document.getElementById('gender_colour').style.setProperty("background", "#ffffff", "important");
+  }
+
+</script>
+
+</body>
 </html>
